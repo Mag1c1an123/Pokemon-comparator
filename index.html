@@ -1,13 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Pokemon Comparator</title>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Header with title  -->
+    <header
+      class="d-flex align-items-center justify-content-center p-3 bg-danger text-white"
+    >
+      <!-- Pokeball Image -->
+      <img
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+        alt="Pokébola"
+        class="me-3"
+        width="50"
+        height="50"
+      />
+
+      <!-- Project title -->
+      <h1>Pokémon Comparator</h1>
+    </header>
+
+    <!-- Main div with 2 cards and inputs inside -->
+    <div class="container p-4">
+      <div class="row g-4">
+        <!-- First card -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <label for="pokemonName" class="form-label">Pokémon Name</label>
+              <input
+                type="text"
+                id="pokemonName"
+                class="form-control mb-3"
+                placeholder="Enter Pokémon name"
+              />
+              <div>
+                <!-- Content for the nested div (e.g., Pokémon information) -->
+                <p>Details about the Pokémon will appear here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second card -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <label for="pokemonId" class="form-label">Pokémon ID</label>
+              <input
+                type="text"
+                id="pokemonId"
+                class="form-control mb-3"
+                placeholder="Enter Pokémon ID"
+              />
+              <div>
+                <!-- Content for the nested div (e.g., Pokémon comparison details) -->
+                <p>Comparison data will be displayed here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
